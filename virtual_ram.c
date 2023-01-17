@@ -2,15 +2,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-// create a random page reference string
-void create_ref_str(int *reference_string, int size)
-{
-    for (int i = 0; i < size; i++)
-    {
-        reference_string[i] = rand() % 10; // page numbers range from 0 to 9
-    }
-}
-
 // LRU page replacement algorithm
 int LRU(int *reference_string, int size, int frame_count)
 {
@@ -178,6 +169,15 @@ int OPT(int *reference_string, int size, int frame_count)
 
     free(frame_buffer);
     return page_faults;
+}
+
+// create a random page reference string
+void create_ref_str(int *reference_string, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        reference_string[i] = rand() % 10; // page numbers range from 0 to 9
+    }
 }
 
 int main()
