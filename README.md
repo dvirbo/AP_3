@@ -1,1 +1,15 @@
 # AP_3
+This code is an implementation of three different page replacement algorithms: LRU, FIFO and OPT.
+
+The first algorithm, LRU, uses a least-recently-used approach to page replacement. A frame buffer array is used to store the pages that are currently in memory,
+ and a timestamp array is used to keep track of the last time each page in the buffer was accessed. When a page fault occurs, the page in the buffer that has the oldest
+  timestamp is replaced with the new page.
+
+The second algorithm, FIFO, uses a first-in, first-out approach to page replacement. A frame buffer array is used to store the pages that are currently in memory.
+ When a page fault occurs, the oldest page in the buffer is replaced with the new page.
+
+The third algorithm, OPT, uses an optimal approach to page replacement. A frame buffer array is used to store the pages that are currently in memory. When a page fault occurs, 
+the page in the buffer that will not be used for the longest time in the future is replaced with the new page.
+
+Each algorithm takes an integer array as an input which is used as the reference string, the size of the reference string, and the number of frames in memory.
+ They return the number of page faults that occurred during the simulation.
